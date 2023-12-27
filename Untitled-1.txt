@@ -1,2 +1,0 @@
-git config --global user.name "Bramerx"
-git config --global -list
