@@ -38,6 +38,10 @@ body {
     color: black;
 }
 
+.pokemon-image {
+    margin: 0 auto;
+}
+
 .tipos{
     margin-top: auto;
     margin-bottom: auto;
