@@ -1,9 +1,7 @@
 
 let itensLista = document.getElementById("poke-lista").innerHTML
 
-const convertPokeLi = ({name, url}) => {
-    const reg = /\/(\d+)\/$/
-    const id = url.match(reg)[1]
+const convertPokeLi = ({name, id, types}) => {
     itensLista +=
         `<li class="pokemon">
         <span class="poke-name">${name}</span>
@@ -19,5 +17,5 @@ const convertPokeLi = ({name, url}) => {
 
 pokeAPI.getPokemons().then(lista=>{
     lista.forEach(poke => convertPokeLi(poke))
-    document.getElementById("poke-lista").innerHTML += itensLista
+    document.getElementById("poke-lista").innerHTML = itensLista
 })
