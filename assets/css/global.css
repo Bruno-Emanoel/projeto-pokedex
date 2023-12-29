@@ -10,6 +10,10 @@ body {
     background-attachment: scroll;
 }
 
+.flexer, header {
+    display: flex;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
