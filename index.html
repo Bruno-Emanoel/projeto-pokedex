@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+
+     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&display=swap" rel="stylesheet">
+    <link id="font-roboto" href="" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" id="pokedex-unimportant" href=""/>
     <link rel="stylesheet" href="/assets/css/global.css"/>
+
+    <!-- Onload script -->
+    <script type='text/javascript'>
+        function addstyle()
+        {
+            document.getElementById('font-roboto').href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&display=swap';
+            document.getElementById('pokedex-unimportant').href='/assets/css/pokedex.css';
+        }
+    </script>
 </head>
-<body>
-    <section class="sec-lista">
+<body onload="addstyle()">
+    <section class="sec-lista wrapper">
         <h1>Pokedex</h1>
         <ol class="lista pokemons" id="poke-lista">
-
+            <!-- pokemon list -->
         </ol>
+        <a href="#poke-lista"><button id="go-down-button" class="fixed go-down" type="button">top</button></a>
+        <a href="#load-more-button"><button id="go-up-button" class="fixed go-up" type="button">bot</button></a>
+        <button id="load-more-button" class="load" onclick="loadPokemons()" type="button">Load More</button>
     </section>
-    <section></section>
+
+    <!-- JS -->
+    <script src="/assets/js/write-html.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
