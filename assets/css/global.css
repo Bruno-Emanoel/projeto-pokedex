@@ -1,0 +1,112 @@
+/* general style for at least 450px width */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d1e5d9;
+    background-image: url(https://ahost2.bulbagarden.net/content/bulbagarden/images/bg-green-2x-optim.png);
+    background-repeat: no-repeat;
+    background-size: 2250px,auto;
+    background-position: center 0,0 0;
+    background-attachment: scroll;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-lista {
+    padding: 1rem;
+}
+
+
+
+button{
+    appearance: none;
+    border: 0;
+    color: black;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.fixed {
+    position: fixed;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    bottom:5vh;
+    font-size: 1.3rem;
+    background: radial-gradient(
+        white 16px,
+        black 17px 18px,
+        white 19px 24px,
+        black 25px 32px,
+        transparent 33px
+      ),
+      linear-gradient(to bottom, red 0 46px, black 47px 60px, white 61px 100%);
+    border-radius: 50%;
+    border: 8px solid black;
+    box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.go-down{
+    right: 5vw;
+}
+
+.go-up {
+    left:5vw;
+}
+
+.load {
+    height: 50px;
+    width: 50%;
+    border-radius: 20px;
+    font-size: larger;
+}
+
+@media screen and (max-width: 576px){
+    .pokemons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+        font-size: 0.5rem;
+    }
+
+    .fixed {
+        font-size: 1.2rem;
+        bottom: 8vh;
+    }
+
+    .load{
+        margin-top: 3vh;
+        height: 30px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .sec-lista {
+        max-width: 1000px;
+        margin: 3% auto;
+    }
+
+    .load{
+        width: 30vw;
+    }
+}
