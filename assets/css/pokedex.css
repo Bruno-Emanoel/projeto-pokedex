@@ -1,3 +1,4 @@
+/*style of the pokedex*/
 .lista{
     list-style: none;
     padding: 0;
@@ -8,7 +9,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 15vh;
-    width: 100%;
 }
 
 .pokemon {
@@ -52,6 +52,7 @@
     filter: brightness(1.1);
 }
 
+/*classes that keep the color of each pokemon type*/
 .normal {
     background-color: #a6a877;
 }
