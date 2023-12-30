@@ -1,4 +1,4 @@
-/* general style for at least 450px width */
+/* general style for 576px<screen width>768px */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -10,6 +10,14 @@ body {
     background-attachment: scroll;
 }
 
+.flexer, header {
+    display: flex;
+}
+
+header{
+    align-items: center;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -18,6 +26,7 @@ body {
 
 .sec-lista {
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 
@@ -36,7 +45,7 @@ button{
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    bottom:5vh;
+    bottom:8vh;
     font-size: 1.3rem;
     background: radial-gradient(
         white 16px,
@@ -61,11 +70,14 @@ button{
 }
 
 .load {
+    margin-top: 3vh;
     height: 50px;
     width: 50%;
     border-radius: 20px;
     font-size: larger;
 }
+
+/* media queries for responsivity */
 
 @media screen and (max-width: 576px){
     .pokemons {
@@ -83,7 +95,6 @@ button{
     }
 
     .load{
-        margin-top: 3vh;
         height: 30px;
         width: 300px;
     }

@@ -16,6 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" id="pokedex-unimportant" href=""/>
     <link rel="stylesheet" href="/assets/css/global.css"/>
+    <link rel="stylesheet" href="/assets/css/poke-info.css"/>
 
     <!-- Onload script -->
     <script type='text/javascript'>
@@ -27,15 +28,20 @@
     </script>
 </head>
 <body onload="addstyle()">
-    <section class="sec-lista wrapper">
-        <h1>Pokedex</h1>
-        <ol class="lista pokemons" id="poke-lista">
-            <!-- pokemon list -->
-        </ol>
-        <a href="#poke-lista"><button id="go-down-button" class="fixed go-down" type="button">top</button></a>
-        <a href="#load-more-button"><button id="go-up-button" class="fixed go-up" type="button">bot</button></a>
-        <button id="load-more-button" class="load" onclick="loadPokemons()" type="button">Load More</button>
-    </section>
+    <div id="flexer" class="">
+        <section class="sec-lista wrapper" id="sec-lista" >
+            <h1>Pokedex</h1>
+            <ol class="lista pokemons" id="poke-lista" style="min-height: 100vh;">
+                <!-- pokemon list -->
+            </ol>
+            <a href="#poke-lista"><button id="go-down-button" class="fixed go-down" type="button">top</button></a>
+            <a href="#load-more-button"><button id="go-up-button" class="fixed go-up" type="button">bot</button></a>
+            <button id="load-more-button" class="load" onclick="loadPokemons()" type="button">Load More</button>
+        </section>
+        <aside class="poke-info invisible" id="poke-info">
+            <!-- pokemon info after click -->
+        </aside>
+    </div>
 
     <!-- JS -->
     <script src="/assets/js/write-html.js"></script>

@@ -1,0 +1,121 @@
+/*styles for the poke info side-bar*/
+
+.poke-info{
+    position: sticky;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    background-color: #dFe0d3;
+    margin-left: 1px solid black;
+    box-shadow: inset 0.2rem 0 10px black;
+    overflow-y: scroll;
+}
+
+#poke-lista.poke-info-active {
+    width:max-content;
+}
+
+#go-down-button.poke-info-active{
+    right: 60vw;
+}
+
+#sec-lista.poke-info-active{
+    width: 50%;
+}
+
+.invisible{
+    display: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+header{
+    justify-content: space-between;
+    padding: 5px;
+}
+
+h3{
+    margin: 0;
+}
+
+.pokemon-info-general {
+    margin: 0;
+    border-radius: 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: white;
+    box-shadow: inherit;
+}
+
+.atributos {
+    text-align: right;
+}
+
+.poke-atribute {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: solid 2px black;
+    box-shadow: inset -5px 0 0 0 black;
+}
+
+.close{
+    background-color: red;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+}
+
+
+
+/*if the screen is too small the pokemon info bar will ocupy all the screen*/
+@media screen and (max-width: 576px){
+    .flexer {
+        display: contents;
+    }
+
+    .poke-info{
+        position: fixed;
+        width: 100%;
+        min-height: 100%;
+        z-index: 2;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    #poke-lista.poke-info-active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px){
+    #poke-lista.poke-info-active {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #sec-lista.poke-info-active{
+       width: 65%;
+    }
+
+    .poke-info{
+        width:35%;
+    }
+
+    #go-down-button.poke-info-active{
+        right: 40vw;
+    }
+}
+@media screen and (min-width: 992px){
+    #poke-lista.poke-info-active {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
