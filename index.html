@@ -28,7 +28,7 @@
     </script>
 </head>
 <body onload="addstyle()">
-    <div class="flexer">
+    <div id="flexer" class="">
     <section class="sec-lista wrapper">
         <h1>Pokedex</h1>
         <ol class="lista pokemons" id="poke-lista">
@@ -38,32 +38,8 @@
         <a href="#load-more-button"><button id="go-up-button" class="fixed go-up" type="button">bot</button></a>
         <button id="load-more-button" class="load" onclick="loadPokemons()" type="button">Load More</button>
     </section>
-    <aside class="poke-info" id="poke-info">
+    <aside class="poke-info invisible" id="poke-info">
         <!-- pokemon info after click -->
-        <header>
-            <h2>Pokemon Info</h2>
-            <button id="close" class="close" onclick="close()" type="button">X</button>
-        </header>
-        <section class="pokemon-info-general grass">
-            <h3 class="poke-name">bulbasaur</h3>
-            <span class="poke-id">#1</span>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur" style="width:auto; height: 100%;" class="pokemon-image">
-            <ol class="lista tipos">
-                <li class="poke-tipo grass">grass</li><li class="poke-tipo poison">poison</li>
-            </ol>
-        </section>
-        <section>
-            <ul class="lista atributos">
-                <li class="poke-atribute">height: 5 |</li>
-                <li class="poke-atribute">weight: 5 |</li>
-                <li class="poke-atribute">hp IV: 10 |</li>
-                <li class="poke-atribute">attack IV: 10 |</li>
-                <li class="poke-atribute">sp.attack IV: 10 |</li>
-                <li class="poke-atribute">defense IV: 10 |</li>
-                <li class="poke-atribute">sp.defense IV: 10 |</li>
-                <li class="poke-atribute">speed IV: 10 |</li>
-            </ul>
-        </section>
     </aside>
     </div>
 

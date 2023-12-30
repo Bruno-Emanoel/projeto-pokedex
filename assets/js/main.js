@@ -5,10 +5,12 @@ let itensLista = document.getElementById("poke-lista").innerHTML
 let off = 0;
 let lim= 20;
 
+
 //function that receives an json element of a pokemon and uses as parameters its name, id and type, then send it to the writeTypeLi method and add to the list variable
-const convertPokeLi = ({name, id, types}) => {
+const convertPokeLi = ({name, id, types, height, weight, stats}) => {
     types = types.map(pokeAPI.getTypeList)
-    itensLista += writeHTML.writePokemonLi(name, id, types[0], writeHTML.writeTypeLi(types))
+    stats = stats.map(pokeAPI.getStats)
+    itensLista += writeHTML.writePokemonLi(name, id, types[0], writeHTML.writeTypeLi(types), height, weight, writeHTML.writeStatLi(stats))
 }
 
 //function responsible for add more pokemons, it's essentially the one that starts everything
@@ -21,3 +23,12 @@ const loadPokemons = ()=>{
 })}
 
 loadPokemons()
+
+//showinfo
+const showInfo = (a)=>{
+    console.log(a)
+
+    document.getElementById("poke-info").class = 'poke-info'
+    document.getElementById('flexer').class = 'poke-info'
+}
+

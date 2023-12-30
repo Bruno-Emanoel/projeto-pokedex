@@ -24,3 +24,6 @@ pokeAPI.getPokemons = (offset = 0, limit = 10)=>{
 
 //method that return the type of the pokemon
 pokeAPI.getTypeList = type=>type.type.name;
+
+//stats
+pokeAPI.getStats = stat=> stat.stat.name + ': ' + stat.base_stat
