@@ -1,5 +1,10 @@
 /* general style for 576px<screen width>768px */
 
+html{
+    
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #d1e5d9;
